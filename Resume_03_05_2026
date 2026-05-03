@@ -1,0 +1,192 @@
+\documentclass[10pt,a4paper]{article}
+
+% --- UNIVERSAL PREAMBLE BLOCK ---
+\usepackage[left=1.0cm,right=1.0cm,top=1.0cm,bottom=1.0cm]{geometry}
+\usepackage{fontspec}
+\usepackage[english, bidi=basic, provide=*]{babel}
+
+% Primary Font: Noto Sans - Clean, modern, and professional
+\babelprovide[import, onchar=ids fonts]{english}
+\babelfont{rm}{Noto Sans}
+\babelfont{sf}{Noto Sans}
+
+% --- PACKAGES ---
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{paracol}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{fontawesome5} 
+\usepackage{microtype} 
+
+% --- COLORS ---
+\definecolor{headerblue}{RGB}{20, 40, 80}      % Deep Navy
+\definecolor{textgray}{RGB}{40, 40, 40}        % Dark Gray
+\definecolor{bulletcolor}{RGB}{50, 50, 50}
+
+% --- FORMATTING ---
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\columnsep}{0.8cm}
+\setstretch{1.10} 
+\emergencystretch=1.5em 
+
+% Section Header Stylings
+\titleformat{\section}
+  {\normalsize\bfseries\color{headerblue}}
+  {}
+  {0em}
+  {\MakeUppercase}
+  [\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+% Custom Job Entry Command
+\newcommand{\job}[4]{
+    \vspace{4pt} 
+    \noindent
+    {\small\bfseries\color{textgray} #1} \hfill {\footnotesize\bfseries #2} \\[1pt]
+    {\scriptsize\textbf{\textit{\color{headerblue} #3}}} \hfill {\scriptsize\textit{#4}}
+}
+
+% Global List Settings
+\setlist[itemize]{leftmargin=4mm, nosep, topsep=1pt, itemsep=1.5pt, label={\scriptsize\color{bulletcolor}\textbullet}}
+
+% Hyperref setup
+\hypersetup{colorlinks=false, hidelinks}
+
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    {\huge\bfseries\color{headerblue} Venkata Murali Kumar Chintala} \\[3pt]
+    {\normalsize\textbf{\color{textgray} Technical Lead}} \\[6pt]
+    \footnotesize
+    \faMapMarker* Visakhapatnam, India \quad \textbar \quad
+    \faPhone* +91-9989225431 \quad \textbar \quad
+    \faEnvelope \ muralikumar.ch@gmail.com \quad \textbar \quad
+    \faLinkedin \ \href{https://linkedin.com/in/chvmuralikumar}{in/chvmuralikumar}
+\end{center}
+
+\vspace{2pt}
+
+% --- LAYOUT START ---
+\columnratio{0.70} 
+\begin{paracol}{2}
+
+\setlist[itemize]{leftmargin=3.5mm, itemsep=0.5pt, parsep=0pt, topsep=2pt}
+
+% =====================
+% LEFT COLUMN (EXPERIENCE)
+% =====================
+\section*{\faUser \hspace{4pt} Professional Profile}
+\begin{spacing}{1.1} 
+\scriptsize
+Strategically focused \textbf{Technical Lead} with 15+ years of success spearheading digital transformations in \textbf{Azure and AWS} environments. Recognized technical authority in architecting scalable AI ecosystems, specializing in \textbf{Generative AI, Agentic AI, and LLM orchestration}. Expert in modernizing legacy Java/J2EE systems into cloud-native microservices architectures. Proven leader in designing autonomous AI agent workflows and high-performance distributed systems that align complex business requirements with technical excellence and enterprise-grade reliability.
+\end{spacing}
+
+\section*{\faBriefcase \hspace{4pt} Professional Experience}
+
+\scriptsize\job{Technical Lead}{July 2024 -- Present}{RCG Global Services (Myridius)}{Chennai, India}
+\begin{itemize}
+    \item \textbf{Architecting} enterprise-wide Generative AI functional designs on Azure AI Studio and AWS Bedrock to drive technical strategy and product innovation.
+    \item \textbf{Spearheading} the end-to-end integration of PearsonVUE services within the ABOS platform, ensuring seamless synchronization and high-availability data exchange.
+    \item \textbf{Leading} the design and implementation of Agentic AI frameworks using multi-agent orchestration to automate complex functional workflows.
+    \item \textbf{Serving} as the Lead Architect for the ABOS project, overseeing the design of resilient cloud-native infrastructures and AI functional roadmaps through April 2026.
+    \item \textbf{Designing} high-availability cloud solutions on Azure and AWS, ensuring seamless architectural integration of LLMs with existing Java-based microservices.
+    \item \textbf{Defining} technical roadmaps and architectural patterns for scalable backend services using Python to optimize high-throughput AI workloads.
+    \item \textbf{Mentoring} senior engineering staff on architectural best practices for Prompt Engineering, vector database integration, and RAG patterns.
+    \item \textbf{Standardizing} 'Clean Architecture' and SOLID principles across AI-driven microservices to guarantee scalability and security.
+\end{itemize}
+
+\vspace{8pt} 
+\job{Principal Java Developer}{Nov 2017 -- June 2024}{Parexel International}{Hyderabad, India}
+\begin{itemize}
+    \item \textbf{Led} the architectural design of full-stack Java/J2EE applications; oversaw multi-tiered solution delivery resulting in a 25\% enhancement in user experience.
+    \item \textbf{Engineered} highly scalable enterprise applications using Java and Spring Framework, defining architectural standards for low-latency performance.
+    \item \textbf{Constructed} and maintained RESTful APIs and microservices architectures to facilitate seamless system integration across distributed teams.
+    \item \textbf{Instituted} comprehensive security architectures (OAuth 2.0, JWT, Spring Security) to safeguard mission-critical healthcare data.
+    \item \textbf{Enhanced} database performance via advanced indexing, partitioning, and query tuning strategies across Oracle and PostgreSQL.
+\end{itemize}
+
+\vspace{8pt} 
+\job{Senior Software Engineer}{Sep 2014 -- Nov 2017}{Parexel International}{Hyderabad, India}
+\begin{itemize}
+    \item \textbf{Spearheaded} the architecture of high-performance Java/J2EE solutions, driving a 20\% improvement in response times through technical leadership.
+    \item \textbf{Governed} enterprise technical standards by leading rigorous architecture reviews and inspections.
+    \item \textbf{Designed} and implemented robust microservices architectures and decoupled RESTful APIs using the Spring Framework.
+\end{itemize}
+
+\vspace{8pt} 
+\job{Senior Software Engineer}{Oct 2013 -- Sep 2014}{Kony IT Services}{Hyderabad, India}
+\begin{itemize}
+    \item \textbf{Directed} the architectural strategy for enterprise-grade mobile applications, integrating Kony platform with complex Java backends.
+    \item \textbf{Implemented} robust security frameworks, including RBAC, session management, and JWT-based authentication.
+\end{itemize}
+
+\vspace{8pt} 
+\job{Software Engineer}{Mar 2010 -- Oct 2013}{Wipro Technologies}{Hyderabad, India}
+\begin{itemize}
+    \item \textbf{Engineered} robust server-side logic using Core Java and Spring Framework for enterprise-grade applications, ensuring high performance.
+    \item \textbf{Optimized} database interactions with Oracle 10g and managed application deployment in JBOSS environments.
+\end{itemize}
+
+\switchcolumn
+\setlist[itemize]{leftmargin=4mm, itemsep=2.5pt, parsep=0pt, topsep=1pt}
+
+% =====================
+% RIGHT COLUMN (SKILLS)
+% =====================
+
+\section*{\faCogs \hspace{4pt} Core Competencies}
+\footnotesize
+\textbf{Architectural Strategy} \\
+{\scriptsize Enterprise Solution Design, Multi-Cloud (Azure, AWS), PMO, Digital Transformation}
+
+\vspace{8pt}
+\textbf{AI \& LLM Orchestration} \\
+{\scriptsize Generative AI, Agentic AI, RAG Patterns, Prompt Engineering, Python}
+
+\vspace{8pt}
+\textbf{Backend Engineering} \\
+{\scriptsize Java/J2EE, Spring Boot, Spring Framework, Hibernate, Microservices, RESTful APIs}
+
+\vspace{8pt}
+\textbf{Cloud Infrastructure} \\
+{\scriptsize Kubernetes (AKS, EKS), Serverless, Azure Functions, AWS Lambda, API Gateway}
+
+\vspace{8pt}
+\textbf{DevOps \& Testing} \\
+{\scriptsize CI/CD, Azure DevOps, Docker, Jenkins, Git, JUnit, TDD, SonarQube}
+
+\vspace{8pt}
+\textbf{Low-Code \& Productivity} \\
+{\scriptsize Microsoft Power Platform, GitHub Copilot, Claude Code, Cursor}
+
+\vspace{12pt} 
+\section*{\faAward \hspace{4pt} Certifications}
+\scriptsize
+\begin{itemize}[leftmargin=3mm, itemsep=3pt]
+    \item \href{https://www.credly.com/badges/5e894b23-c4f7-4a0a-8c51-111e6cda5d9f}{AWS Certified AI Practitioner (2025)}
+    \item \href{https://learn.microsoft.com/api/credentials/share/en-us/MuraliChintala/F5FCFCA4028552C1}{Azure AI Engineer Associate (2024)}
+    \item \href{https://www.credly.com/badges/781d466b-8d24-470d-8564-f7a7f7747c74}{AWS Solutions Architect Assoc. (2026)}
+    \item \href{https://www.credly.com/badges/7752e98a-4907-47c0-83c5-e24dad34ec82}{AWS Certified Developer Assoc. (2024)}
+    \item \href{https://learn.microsoft.com/en-us/users/muralichintala/credentials/6c7fae34bf5fe202}{Azure Solutions Architect Expert (2022)}
+    \item Azure Developer Associate (2021)
+    \item Oracle Certified Programmer (2019)
+\end{itemize}
+
+\vspace{12pt} 
+\section*{\faGraduationCap \hspace{4pt} Education}
+\footnotesize
+\textbf{Master of Computer Application} \\
+{\scriptsize Andhra University \textbar\ 2006}
+
+\vspace{6pt}
+\textbf{B.Sc. Computer Science} \\
+{\scriptsize Andhra University \textbar\ 2003}
+
+\end{paracol}
+
+\end{document}
